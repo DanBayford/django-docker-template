@@ -13,6 +13,7 @@ RUN apk update
 
 # install project dependencies
 RUN pip install --upgrade pip
+COPY ./requirements/base.txt .
 COPY ./requirements/dev.txt .
 RUN pip install -r dev.txt
 
